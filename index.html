@@ -1,0 +1,398 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="shubham ranga builds ai systems and products. he has built two consumer products used by more than 3,300 people.">
+  <meta name="theme-color" content="#ffffff">
+  <title>shubham ranga</title>
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --line: #dddddd;
+      --link: #0645ad;
+      --visited: #551a8b;
+      --max-width: 760px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      text-transform: lowercase;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(calc(100% - 40px), var(--max-width));
+      margin: 0 auto;
+      padding: 64px 0 48px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p { margin-top: 0; }
+
+    h1 {
+      margin-bottom: 2px;
+      font-size: 32px;
+      line-height: 1.2;
+    }
+
+    .tagline {
+      margin-bottom: 22px;
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    header > p:not(.tagline):not(.links) { max-width: 680px; }
+
+    a { color: var(--link); }
+    a:visited { color: var(--visited); }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 8px;
+      margin: 22px 0 0;
+      font-size: 14px;
+    }
+
+    .links span { color: var(--muted); }
+
+    hr {
+      margin: 34px 0;
+      border: 0;
+      border-top: 1px solid var(--line);
+    }
+
+    section { margin-top: 44px; }
+
+    h2 {
+      margin-bottom: 22px;
+      font-size: 18px;
+      line-height: 1.3;
+      text-transform: lowercase;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .date {
+      margin: 1px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .entry p,
+    .project p { margin-bottom: 10px; }
+
+    .project { margin-bottom: 22px; }
+
+    small {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .muted { color: var(--muted); }
+
+    .writing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .article-card {
+      display: block;
+      min-width: 0;
+      padding: 8px 8px 15px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #ffffff;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .article-card:visited { color: var(--text); }
+
+    .article-card:hover {
+      border-color: #a9bfdc;
+      box-shadow: 0 2px 10px rgba(26, 26, 26, 0.08);
+    }
+
+    .article-card:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 3px;
+    }
+
+    .article-meta {
+      display: block;
+      margin: 11px 5px 5px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .article-card strong {
+      display: block;
+      margin: 0 5px;
+      font-size: 16px;
+      line-height: 1.35;
+    }
+
+    .article-thumb {
+      position: relative;
+      display: flex;
+      aspect-ratio: 16 / 10;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    .thumb-llm {
+      background:
+        radial-gradient(circle at 82% 18%, rgba(98, 128, 255, 0.9), transparent 30%),
+        linear-gradient(145deg, #101324, #202b56 58%, #13182c);
+      color: #ffffff;
+    }
+
+    .thumb-attention {
+      background:
+        radial-gradient(circle at 78% 22%, rgba(255, 198, 88, 0.95), transparent 28%),
+        linear-gradient(145deg, #f6eddb, #dfc998);
+      color: #262014;
+    }
+
+    .thumb-sarvam {
+      background:
+        radial-gradient(circle at 84% 20%, rgba(194, 151, 255, 0.9), transparent 29%),
+        linear-gradient(145deg, #12192b, #384677 58%, #171f35);
+      color: #ffffff;
+    }
+
+    .thumb-label,
+    .thumb-note {
+      position: relative;
+      z-index: 1;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: lowercase;
+    }
+
+    .thumb-note {
+      font-size: 8px;
+      opacity: 0.75;
+    }
+
+    .thumb-headline {
+      position: relative;
+      z-index: 1;
+      font-size: clamp(20px, 3vw, 27px);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.04em;
+    }
+
+    footer {
+      margin-top: 54px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer p { margin-bottom: 0; }
+
+    @media (max-width: 560px) {
+      main { padding-top: 36px; }
+      h1 { font-size: 28px; }
+      .entry { grid-template-columns: 1fr; gap: 3px; }
+      .date { margin-bottom: 2px; }
+      .writing-grid { grid-template-columns: 1fr; }
+      .article-thumb { aspect-ratio: 16 / 9; }
+      .thumb-headline { font-size: 30px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>shubham ranga</h1>
+      <p class="tagline">i build applied ai systems.</p>
+      <p>
+        i have built two consumer products used by more than 3,300 people. i work across ai pipelines, rest apis, cloud systems and the product layer around them.
+      </p>
+      <p class="links">
+        <a href="mailto:shubham.da011@gmail.com">email</a>
+        <span>/</span>
+        <a href="https://github.com/shubhamxranga" target="_blank" rel="noreferrer">github</a>
+        <span>/</span>
+        <a href="https://huggingface.co/Shubhamranga11" target="_blank" rel="noreferrer">hugging face</a>
+        <span>/</span>
+        <a href="https://www.linkedin.com/in/shubham-ranga-arasthoo/" target="_blank" rel="noreferrer">linkedin</a>
+        <span>/</span>
+        <a href="https://x.com/ShubhamRanga_" target="_blank" rel="noreferrer">x/twitter</a>
+      </p>
+    </header>
+
+    <hr>
+
+    <section aria-labelledby="experience-title">
+      <h2 id="experience-title">experience</h2>
+
+      <article class="entry">
+        <p class="date">may ’25 to jul ’26</p>
+        <div>
+          <h3><a href="https://play.google.com/store/apps/details?id=com.ai.neuralcode&amp;hl=en_IN" target="_blank" rel="noreferrer">arasthoo</a></h3>
+          <p>
+            i built a gamified learning app for stem students and techies. it combined personalised stories, daily quizzes, karma points, coding contests, leaderboards and mini-games. it reached more than 900 users and was backed by nirmaan, iit madras.
+          </p>
+          <p>
+            i spoke with more than 200 students across iit bombay, iit delhi and iisc to understand their learning habits and refine the product.
+          </p>
+          <p>
+            i built arasthoo’s ai content pipeline end to end: automated article ingestion, transformed source articles into structured story objects, and served them to the personalised feed through rest apis.
+          </p>
+        </div>
+      </article>
+
+      <article class="entry">
+        <p class="date">feb ’24 to may ’25</p>
+        <div>
+          <h3>ekonara</h3>
+          <p>
+            i built a short-news product that preserved context. each story used one main heading, three subheadings and concise supporting explanations. it covered economics, global trade, technology, sports and entertainment. it was backed by microsoft for startups and reached about 2,400 users.
+          </p>
+          <p>
+            i worked across the news ingestion and summarisation pipeline, crawling articles from indian and international publications, structuring them into a consistent short-news format, and helping ship the product to users.
+          </p>
+          <p>
+            as the dataset grew, our team used <strong>100k+ article-summary pairs</strong> to fine-tune <strong>bart-large-cnn</strong>, moving much of the summarisation workload away from external apis while preserving our structured short-news format.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">projects</h2>
+
+      <article class="project">
+        <h3><a href="https://github.com/shubhamxranga/Logpsy" target="_blank" rel="noreferrer">logpsy</a></h3>
+        <p><strong>Specialized SRE Incident Analysis Model for Structured Root Cause Analysis</strong></p>
+        <p>
+          Fine-tuned from Qwen2.5-Coder-7B-Instruct to analyze production logs and telemetry, identify evidence-backed incident hypotheses, and generate deterministic JSON for automated incident response pipelines.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://neuralcodeai.in" target="_blank" rel="noreferrer">andi ai</a> <small>in progress · 2.5k pypi downloads</small></h3>
+        <p>
+          An open-source query compiler for safer AI-agent access to MongoDB. It turns natural-language requests into schema-validated, read-only queries while keeping production data away from the model.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>metricguard <small>currently building, learning as i go</small></h3>
+        <p>
+          A trustworthy AI data analyst that turns business questions into validated, read-only SQL and evidence-backed explanations. It uses schema and metric context, query guardrails and evaluation tests to avoid unsafe or unsupported answers.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>mcpcheck <small>currently learning and figuring it out as i build</small></h3>
+        <p>
+          an open-source cli for testing how reliably ai agents use mcp tools. i’m exploring tool selection, argument validation, failure recovery, fuzzing and regression evals while building it.
+        </p>
+      </article>
+
+      <article class="project">
+        <h3><a href="https://github.com/shubhamxranga/macsweep" target="_blank" rel="noreferrer">macsweep 🧹</a> <small>built with codex</small></h3>
+        <p>
+          A 100% offline macOS storage manager, cache cleaner and file organizer for the terminal.
+        </p>
+        <p>
+          An open-source alternative to CleanMyMac and Hazel. No cloud. No telemetry. No subscriptions. Just clean your Mac.
+        </p>
+      </article>
+    </section>
+
+
+    <section aria-labelledby="reading-title">
+      <h2 id="reading-title">currently reading</h2>
+      <p>thinking, fast and slow</p>
+      <p>designing machine learning systems by chip huyen</p>
+    </section>
+
+    <section id="writing" aria-labelledby="writing-title">
+      <h2 id="writing-title">writing</h2>
+      <div class="writing-grid">
+        <a class="article-card" href="https://medium.com/@shubhamranga011/why-evaluating-llms-is-so-much-harder-than-evaluating-regular-ml-models-caf6e6ae0c72" target="_blank" rel="noreferrer">
+          <span class="article-thumb thumb-llm" aria-hidden="true">
+            <span class="thumb-label">AI systems</span>
+            <span class="thumb-headline">LLM<br>evaluation</span>
+            <span class="thumb-note">judgment · bias · ambiguity</span>
+          </span>
+          <span class="article-meta">Medium · <time datetime="2026-07-07">Jul 2026</time></span>
+          <strong>Why Evaluating LLMs Is So Much Harder Than Evaluating Regular ML Models</strong>
+        </a>
+
+        <a class="article-card" href="https://medium.com/@shubhamranga011/why-your-attention-isnt-broken-and-what-actually-matters-b39261107bf3" target="_blank" rel="noreferrer">
+          <span class="article-thumb thumb-attention" aria-hidden="true">
+            <span class="thumb-label">focus &amp; attention</span>
+            <span class="thumb-headline">Your mind<br>isn't broken</span>
+            <span class="thumb-note">incentives · habits · meaning</span>
+          </span>
+          <span class="article-meta">Medium · <time datetime="2026-01-28">Jan 2026</time></span>
+          <strong>Why Your Attention Isn’t Broken, and What Actually Matters</strong>
+        </a>
+
+        <a class="article-card" href="https://www.linkedin.com/feed/update/urn:li:activity:7488562202283614209" target="_blank" rel="noreferrer">
+          <span class="article-thumb thumb-sarvam" aria-hidden="true">
+            <span class="thumb-label">India's AI stack</span>
+            <span class="thumb-headline">Sarvam<br>Epoch</span>
+            <span class="thumb-note">models · agents · compute</span>
+          </span>
+          <span class="article-meta">LinkedIn · <time datetime="2026-07-30">Jul 2026</time></span>
+          <strong>Sarvam Epoch: Building the Entire AI Stack from India</strong>
+        </a>
+      </div>
+    </section>
+
+<footer>
+      <p>bengaluru, india. open to applied ai, data, ai product and technical founder's office roles.</p>
+    </footer>
+  </main>
+</body>
+</html>
